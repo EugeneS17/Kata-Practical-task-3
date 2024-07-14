@@ -1,0 +1,219 @@
+.page {
+    font-family: "TT Lakes";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    background-color: #f8f8f8;
+    max-width: 1120px;
+    margin: auto;
+    border-block-start: solid 1px #d9fff5;
+}
+
+.container {
+    margin-inline: 16px;
+}
+
+.brands__title {
+    padding: 16px;
+    margin-block-end: 16px;
+    color: #7e7e82;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    background: linear-gradient(to right, #f8f8f8, #ffffff);
+}
+
+.swiper-slides__list {
+    list-style: none;
+}
+
+.swiper-slide__link {
+    display: block;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: solid 2px #ff3e79;
+    padding: 0;
+    cursor: pointer;
+    background: url("../images/dropdown.svg") no-repeat center;
+}
+
+.show-all-button {
+    position: relative;
+    align-self: flex-start;
+    height: 24px;
+    padding-inline-start: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+}
+
+.show-all-button::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: url("../images/arrow-down.svg") no-repeat center;
+}
+
+.show-all-button--show::before {
+    transform: rotateX(180deg);
+}
+
+
+
+.swiper-slides__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+    grid-auto-rows: 72px;
+    row-gap: 16px;
+    column-gap: 16px;
+    max-height: calc(72px * 2 + 16px);
+    margin-block-end: 24px;
+    overflow-y: hidden;
+    transition: 0.5s ease-out;
+}
+
+.swiper-slides__list--show {
+    max-height: 335px;
+}
+
+.swiper-slides__item {
+    width: 240px;
+    height: 72px;
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid #eaeaea;
+    border-radius: 6px;
+    padding: 16px;
+    background-color: #ffffff;
+}
+
+.hidden {
+    display: none;
+}
+
+.img-Lenovo {
+    width: 108px;
+    height: 32px;
+}
+
+.img-Samsung {
+    width: 116px;
+    height: 39px;
+}
+
+.img-Apple {
+    width: 44px;
+    height: 44px;
+}
+
+.img-ViewSonic {
+    width: 128px;
+    height: 21px;
+}
+
+.img-Bosch {
+    width: 128px;
+    height: 29px;
+}
+
+.img-Hp {
+    width: 52px;
+    height: 52px;
+}
+
+.img-Acer {
+    width: 94px;
+    height: 24px;
+}
+
+.img-Sony {
+    width: 128px;
+    height: 26px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ababab !important;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #b5b6bc;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        margin-inline-end: 0;
+    }
+
+    .swiper-slides::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        width: 24px;
+        height: 72px;
+        background: linear-gradient(90deg, transparent, #f8f8f8);
+    }
+
+    .swiper-slides__item {
+        width: 240px !important;
+    }
+
+    .swiper-wrapper {
+        margin-block-end: 36px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1119px) {
+    .container {
+        margin-inline: 24px;
+    }
+
+    .brands__title {
+        margin-block-end: 24px;
+    }
+
+    .swiper-slides::after {
+        display: none;
+    }
+
+    .swiper-slides__list {
+        column-gap: 24px;
+    }
+
+    .swiper-slides__item {
+        width: 224px !important;
+    }
+
+}
+
+@media screen and (width >=1120px) {
+    .container {
+        margin-inline: 32px;
+    }
+
+    .brands__title {
+        margin-block-end: 24px;
+    }
+
+    .swiper-slides__list {
+        column-gap: 32px;
+    }
+
+    .swiper-slides__item {
+        width: 240px !important;
+    }
+}
